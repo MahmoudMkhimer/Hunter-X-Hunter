@@ -1,0 +1,144 @@
+body {
+  display: block;
+}
+.icons-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background-color: #ebecf0;
+  position: fixed;
+  right: 1%;
+  /* transform: translateX(-50%); */
+  z-index: 10;
+  height: fit-content;
+  padding-left: 5px;
+}
+.icons-container a {
+  font-size: 4rem;
+  width: fit-content;
+  padding: 1rem;
+  color: #d4af37;
+}
+.navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  transition: box-shadow 0.5s;
+  box-shadow: none;
+}
+ul a:hover {
+  box-shadow: 5px 5px 5px 0 #cbced1, -3px -3px 5px 0 #ffffff;
+  z-index: 999;
+}
+ul a:active {
+  box-shadow: 2px 2px 5px 0 #cbced1, -2px -2px 5px 0 #ffffff;
+}
+.book-pic {
+  width: 23%;
+}
+.book-pic img {
+  width: 95%;
+  height: 30rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 4px #cbced1, -2px -2px 6px #ffffff;
+}
+.imgs-categories {
+  display: flex;
+}
+li.active {
+  box-shadow: 2px 2px 5px 0 #cbced1, -2px -2px 5px 0 #ffffff;
+}
+.gallery {
+  grid-column: 1/5;
+  display: flex;
+  column-gap: 2.4rem;
+  flex-wrap: wrap;
+  row-gap: 2.4rem;
+  justify-content: center;
+}
+
+.gallery img {
+  transition: filter 0.5s;
+  transition: transform 0.3s;
+  filter: grayscale(100%);
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.gallery img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 94em) {
+  .container {
+    width: 95%;
+  }
+}
+@media (max-width: 81em) {
+  .header {
+    font-size: 4rem;
+  }
+  .logo img {
+    max-height: 8rem;
+  }
+  .book-pic {
+    width: 30%;
+  }
+}
+@media (max-width: 63em) {
+  html {
+    font-size: 50%;
+  }
+  .subheading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 63em) {
+  .book-pic {
+    width: 46%;
+  }
+}
+@media (max-width: 45em) {
+  .gallery {
+    grid-column: 1/5;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 30em) {
+  .book-pic {
+    width: 80%;
+  }
+  .navbar a {
+    line-height: 2;
+  }
+  .navbar ul {
+    justify-content: center;
+  }
+  .header {
+    font-size: 3rem;
+  }
+}
